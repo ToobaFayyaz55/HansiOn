@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   bool showSplash = true;
 
   void showSplashScreen() async {
-    await Future.delayed(Duration(seconds: 4));
+    await Future.delayed(Duration(seconds: 6));
     setState(() {
       showSplash = false;
     });
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'HansiOn',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
       home: showSplash ? splashScreen() : HomeScreen(),
