@@ -3,7 +3,7 @@ import 'package:HansiOn/controller/fetchMeme.dart';
 import 'package:HansiOn/controller/saveMyData.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -54,9 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 120,),
             Text("Meme # ${memeNo.toString()}" , style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),),
             SizedBox(height: 10,),
-            Text("Target ${targetMeme} Memes", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),),
+            Text("Target $targetMeme Memes", style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),),
             SizedBox(height: 30,),
-            isLoading ? Container(
+            isLoading ? SizedBox(
               height: 400,
               width: MediaQuery.of(context).size.width,
               child: Center(
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     backgroundColor: Colors.purple,
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
-                child: Container(
+                child: SizedBox(
                 height: 60,
                 width: 125,
                 child: Center(child: Text("More Fun!!" , style: TextStyle(fontSize: 25))))),
